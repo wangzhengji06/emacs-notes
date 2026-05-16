@@ -1,4 +1,4 @@
-Commands to remember:
+Commands to remember
 
 emacslient -c Start the emacs in gui mode
 
