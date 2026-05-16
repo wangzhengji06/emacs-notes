@@ -171,3 +171,88 @@ M-b Move backward by word
 M-x subword-mode Minor mode that trets CamelCase as distinct workds
 
 M-x superword-mode Minor mode that treats snake_cas as one word
+
+## Move by S expression
+
+C-M-f Move forward by s-expression, here this is like same level
+
+C-M-b Move backward by s-expression
+
+## Up and down by list
+
+Here the list means the nearest balanced expression of parentheses
+
+C-M-d move down into a list, this means it will travel into parenthesis
+
+C-M-u move up out of a list
+
+It can combine with the following command:
+
+C-M-k kill-sexp
+
+## Forward and Backward List
+
+C-M-n moves forward to the next list
+
+C-M-p moves backward to the previous list
+
+** The difference here is that, List is determined by parenthsis brackets etc, while s-expression can contain string object etc
+
+## Other Movement Commands
+
+M-} Move forward to the end of paragraph
+
+M-{ Move backward to the start of paragraph
+
+M-a Move to beginning of sentence
+
+M-e Move to end of sentence
+
+A good customization is M-x customize-option sentence-end-double-space so that a single space does not end a sentence.
+
+C-M-a Move to the beginning of defun
+
+C-M-e Move to the end of defun
+
+C-x ] Move fowards one page
+
+C-x [ Move backwards one page
+
+C-v Scroll down
+	
+M-v Scroll up
+
+C-M-v Scroll down the other window
+
+C-M-S-v Scroll up the other window or you can use C-M-- C-M-v
+
+C-x < Scroll left
+
+C-x > Scroll right
+
+M-< Move to the beginning of the buffer
+
+M-> Move to the end of the buffer
+
+C-u C-<SPC> go back to the original location
+
+## Bookmarks and Registers
+
+Bookmarks are permanent.
+
+C-x r m Set a bookmark
+
+C-x r l List bookmarks
+
+C-x r b Jump to bookmark
+
+Registeres are temporary.
+
+C-x r s Store region in register
+
+C-x r i Insert content of register at the pointer.
+
+C-u C-x r i Insert content of register after the pointer.
+
+## Selections and Regions
+
