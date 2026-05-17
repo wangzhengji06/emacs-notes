@@ -1,3 +1,4 @@
+
 Commands to remember
 
 emacslient -c Start the emacs in gui mode
@@ -255,4 +256,151 @@ C-x r i Insert content of register at the pointer.
 C-u C-x r i Insert content of register after the pointer.
 
 ## Selections and Regions
+
+	How to select a region: Use C-<SPC> , then move the point around the buffer, then press C-<SPC> again to deactivate the region. This is called Transient Mark Mode(TMM). 
+	
+	What happens under the hood is that, when you do C-<SPC> or commands like M-< and M->, it register a mark in the Mark ring.
+	
+	That means when you want to record a location where you can return to using C-u C-<SPC>, you will have to press C-<SPC> to activate it, and C-<SPC> again to deactivate it. 
+
+C-<SPC> Sets the mark, and toggle the region
+
+C-u C-<SPC> Jumps to the mark, and go back the mark ring
+
+S+<left>,... Shift selection similar to other editors
+
+C-x C-x Exchanges the point and mark, and reactivates your last region
+
+### Selecting using commands
+C-x SPC  Toggle M-x rectangle-mark-mode on or off
+
+M-h Marks the next paragraph
+
+C-x h Marks the whole buffer
+
+C-M-h Marks the next defun
+
+M-@ Makrs the next word
+
+C-M-<SPC>/C-M-@ Marks the next s-expression, very useful to use with C-M-- to reverse the direction
+
+C-<SPC>, C-g Deactivates the region
+
+
+## Searching and Indexing
+### Isearch: Incremental Search
+C-s Begins an incremental search
+
+C-r Begins a backward incremental search
+
+C-M-s Begins a regexp incremental search
+
+C-M-r Begins a regexp backward incremental search
+
+RET Pick the selected match
+
+C-g Exit Isearch
+
+M-< M-> Jump to first or last match
+
+C-v,M-v Jump to the next or previous match not currently visible
+
+M-n,M-p Move to next and previous in search history
+
+C-s C-s Begin Isearch against last search string
+
+C-r C-r Begin backward Isearch against last search string
+
+C-M-i auto completion for search item, notice that this serves as tab in a lot of modes as well
+
+C-s C-w Add word at point to searh string
+
+C-s C-y Search using clipboard
+
+C-s M-s C-e Add rest of line at point to search string
+
+M-s c Toggles case-sensitivity
+
+M-s r Toggles regular-expression mode
+
+M-s w Isearch foward for word
+
+M-s _ Isearch forward for symbol
+
+M-s . Isearch forward for symbol at point
+
+M-s M-. Isearch forward for thing at point
+
+M-s <SPC> TOggles lax whitespace matching
+
+
+
+### Occur: Print and Edit lines matching an expression
+Occur mode will create a new buffer called *Occur* with all the match results in it.
+
+M-s o Occur mode
+
+M-n,M-p go to next/previous occurence
+
+<,> Go to the beginning and end of buffer
+
+g revert the buffer and refresh the results
+
+q Quit occur
+
+e Switch to edit mode
+
+C-c C-c Exists occur edit mode and applied changes
+
+M-g M-n Jump to the next "error"
+
+M-g M-p Jump to previous "error"
+### Imenu: Jump to definitions
+M-g i Activate Imenu (Maybe this is worth rebinding to M-i)
+
+### Helm: Incremental Completion and Selection
+I will not use it.
+
+### IDO: Interactively DO Things
+I will not use it
+
+### Grep: Searching for the file system
+M-x grep Prompts for arguments to pass to grep
+
+M-x grep-find Prompt for arguiments to pass to grep and find
+
+M-x lgrep Prompts for query and glob pattern to search for with grep
+
+M-x rgrep Prompts for query and glob patern then recursively searches with grep and find
+
+M-x rzgrep Like M-x rgrep but searches compressed gzip files
+
+M-g M-n Jump to next match
+
+M-g M-p Jump to previous match
+
+
+### Other Movement Commands
+
+M-r Re-positions the point to the top left, middle left, or bottom left
+
+C-l Receneters the pointer
+
+M-g M-g go to line
+
+M-g TAB go to column
+
+
+
+### Consult Keybind
+
+M-s s Consult-outline, seems to provide a good structure of current buffer
+
+C-s Consult-line
+
+C-x b Consult-buffer
+
+M-s f Consult-find
+
+M-s g Consult-ripgrep
 
