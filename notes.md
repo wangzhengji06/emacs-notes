@@ -404,3 +404,7 @@ M-s f Consult-find
 
 M-s g Consult-ripgrep
 
+- Search in the current buffer (consult-line C-s)
+- Search recursively for file NAME in a directory (consult-find M-s f)
+- Search recursively for file CONTENTS in a directory (consult-ripgrep M-s g)
+
