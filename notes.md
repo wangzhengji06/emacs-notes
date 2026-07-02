@@ -408,3 +408,70 @@ M-s g Consult-ripgrep
 - Search recursively for file NAME in a directory (consult-find M-s f)
 - Search recursively for file CONTENTS in a directory (consult-ripgrep M-s g)
 
+
+# Kill and Yank Text
+
+C-d DEL
+
+M-d Kill word
+
+C-k Kill rest of line
+
+M-k Kill sentence
+
+C-M-k Kill s-expression
+
+C-S-<backspace> kill current line
+
+*You can use C-M-- to reverse the direction of kill, as always*
+
+C-w Kill active region
+
+M-w Copy to kill ring
+
+C-M-w Append kill
+
+C-y Yank last kill
+
+M-y Show kill-ring history
+
+
+# Transposing Text
+
+C-t Tranpose characters # pull the left character to the right, but at the end of the line 
+
+M-t Transpose words 
+
+C-M-t Transpose s-expressions
+
+C-x C-t Transpose lines
+
+M-x transpose-paragraphs
+
+M-s transpose-sentences
+
+# Filling and Commenting
+
+## Filling
+
+M-q Refill the paragraph
+
+C-x f Set the fill column width
+
+C-x . Set the fill prefix
+
+M-x auto-fill-mode Toggles auto-filling
+
+
+## Commenting
+
+M-; Do what I mean
+
+C-x C-; Comment or uncomment line
+
+M-x comment-box Comment the region as a box
+
+M-j / C-M-j Insert new line and continues with comment on the new line
+
+	
+	
